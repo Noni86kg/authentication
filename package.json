@@ -5,7 +5,9 @@
   "main": "backend/server.js",
   "scripts": {
     "start": "node backend/sever.js",
-    "server": "nodemon backend/sever.js"
+    "server": "nodemon backend/sever.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Noni",
   "license": "ISC",
@@ -19,6 +21,7 @@
     "mongoose": "^7.5.0"
   },
   "devDependencies": {
+    "concurrently": "^8.2.1",
     "nodemon": "^3.0.1"
   }
 }
